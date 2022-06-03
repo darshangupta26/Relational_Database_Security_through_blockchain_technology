@@ -1,0 +1,57 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.22-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema rdbmsblockchain
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ rdbmsblockchain;
+USE rdbmsblockchain;
+
+--
+-- Table structure for table `rdbmsblockchain`.`registerinfo`
+--
+
+DROP TABLE IF EXISTS `registerinfo`;
+CREATE TABLE `registerinfo` (
+  `Name` varchar(45) default NULL,
+  `DOB` varchar(45) default NULL,
+  `Address` varchar(45) default NULL,
+  `Email` varchar(45) default NULL,
+  `Mobile` varchar(45) default NULL,
+  `Userid` varchar(45) NOT NULL default '',
+  `Password` varchar(45) default NULL,
+  `Authentication_Key` varchar(45) default NULL,
+  PRIMARY KEY  (`Userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rdbmsblockchain`.`registerinfo`
+--
+
+/*!40000 ALTER TABLE `registerinfo` DISABLE KEYS */;
+INSERT INTO `registerinfo` (`Name`,`DOB`,`Address`,`Email`,`Mobile`,`Userid`,`Password`,`Authentication_Key`) VALUES 
+ ('Amita','02-04-1993','pune','amitadsingh@gmail.com','9988776655','amita123','1234','9004'),
+ ('rahul','04-03-1995','pune','rahul@gmail.com','8877665544','rahul123','123','0080');
+/*!40000 ALTER TABLE `registerinfo` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
